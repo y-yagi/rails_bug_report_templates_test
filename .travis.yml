@@ -6,6 +6,6 @@ rvm:
 script: ./travis.rb
 
 before_install:
-  - "rvm @global do gem uninstall bundler --all --ignore-dependencies --executables"
+  - "rvm @global do gem uninstall bundler --all --ignore-dependencies --executables || true"
   - "travis_retry rvm @global do gem install bundler -v 1.15.4"
   - "bundle --version"
